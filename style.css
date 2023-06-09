@@ -12,6 +12,7 @@
   --surface-color-hover: rgba(255, 255, 255, 0.2);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moon-stars.svg);
+  --button: rgba(0, 0, 0, 0.05);
 }
 
 .light {
@@ -22,6 +23,7 @@
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
+  --button: rgba(255, 255, 255, 0.05);
 }
 
 body {
@@ -108,7 +110,6 @@ ul {
 }
 
 ul li a {
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,6 +128,53 @@ ul li a {
 ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
+}
+
+.experience {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  padding: 0;
+}
+
+.experience li a {
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+}
+
+.experience li a.toggle {
+  border-radius: 8px 8px 0 0;
+}
+
+#exp.toggle {
+  background: rgb(0, 0, 0, 0.3);
+}
+
+#exp-li {
+  border-radius: 0 0 8px 8px;
+  display: none;
+  font-size: 10px;
+}
+
+.title {
+  font-size: 14px;
+}
+
+#exp-li.toggle {
+  display: flex;
+}
+
+#list {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  cursor: auto;
+}
+
+#list.toggle {
+  border-radius: 0 0 8px 8px;
 }
 
 /* social links */
@@ -168,9 +216,11 @@ footer {
   transform: translate(-50%, -50%);
   z-index: 10;
   margin: 0 auto 0;
-  width: 313px;
+  /* width: 313px; */
+  width: 100vw;
+  height: 100vh;
   padding: 10px 10px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -189,9 +239,13 @@ footer {
   gap: 20px;
 }
 
-#discordid,
+#discordid {
+  color: white;
+}
 .close-button {
   color: white;
+  font-size: 50px;
+  margin: 0 15px;
 }
 
 @keyframes fadeIn {
