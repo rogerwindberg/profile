@@ -153,6 +153,22 @@ ul li a:hover {
   border-radius: 8px 8px 0 0;
 }
 
+#exp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#exp p:nth-child(1) {
+  margin-right: -16px;
+  text-align: center;
+  flex: 1;
+}
+
+#exp p:nth-child(2) {
+  flex: 0 0 auto;
+}
+
 #exp.toggle {
   background: rgb(0, 0, 0, 0.3);
 }

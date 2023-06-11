@@ -43,7 +43,14 @@
         </li>
         <ul class="experience">
           <li>
-            <a href="#" id="exp">Experiência</a>
+            <a href="#" id="exp" onclick="toggleIcon(), collapse()"
+              ><p>Experiência</p>
+              <p>
+                <ion-icon
+                  name="chevron-down-outline"
+                  id="ionIcon"
+                ></ion-icon></p
+            ></a>
           </li>
           <li id="exp-li">
             <a href="#" id="list"
@@ -87,7 +94,7 @@
     <!-- Popup -->
     <div class="popup" id="popup">
       <div class="popup-content">
-        <div id="discordid">Roger "DexTiger" Windberg#6896</div>
+        <div id="discordid">@rogerwindberg</div>
         <button class="copy-button" onclick="copyToClipboard()">Copiar</button>
         <span class="close-button" onclick="closePopup()">&times;</span>
       </div>
@@ -102,8 +109,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="./clipboard.js"></script>
-    <script src="./script.js"></script>
-    <script src="./collapse.js"></script>
+    <script src="./scripts.js"></script>
   </body>
 </html>

@@ -1,6 +1,38 @@
+function toggleMode() {
+  const html = document.documentElement
+  html.classList.toggle("light")
+
+  const img = document.querySelector("#profile img")
+
+  if (html.classList.contains("light")) {
+    img.setAttribute("src", "./assets/avatar-light.png")
+  } else {
+    img.setAttribute("src", "./assets/avatar.png")
+  }
+}
+
+function toggleIcon() {
+  let icon = document.getElementById("ionIcon")
+  let iconName = icon.getAttribute("name")
+  if (iconName === "chevron-down-outline") {
+    icon.setAttribute("name", "chevron-up-outline")
+  } else {
+    icon.setAttribute("name", "chevron-down-outline")
+  }
+}
+
+function collapse() {
+  const content = document.getElementById("exp-li")
+  const list = document.getElementById("list")
+
+  content.classList.toggle("toggle")
+  exp.classList.toggle("toggle")
+  list.classList.toggle("toggle")
+}
+
 // Copia o texto
 function copyToClipboard() {
-  let text = 'Roger "DexTiger" Windberg#6896'
+  let text = "@rogerwindberg"
 
   navigator.clipboard
     .writeText(text)
