@@ -64,22 +64,13 @@ function closePopup() {
   popup.style.display = "none"
 }
 
-// Abre o Discord e exibe o perfil do usuário
-function openDiscordApp() {
-  let userId = "246838387154092032"
-
-  // Verifica se o usuário possui o Discord instalado
-  if (window.navigator && window.navigator.msLaunchUri) {
-    // para Web Browser
-    window.navigator.msLaunchUri("discord://user?id=" + userId)
-  } else if (
-    window.navigator &&
-    window.navigator.userAgent.match(/(android|iphone|ipad)/i)
-  ) {
-    // para dispositivos Andorid e iOS
-    window.location.href = "discord://user?id=" + userId
+// Mostra o popup quando o ícone do Discord é clicado
+let discordIcon = document.getElementById("discord")
+discordIcon.addEventListener("click", function () {
+  let popup = document.getElementById("popup")
+  if (popup.style.display === "flex") {
+    popup.style.display = "none"
   } else {
-    // para outros dispositivos ou Web Browsers
-    window.open("https://discord.com/users/" + userId)
+    popup.style.display = "flex"
   }
-}
+})
